@@ -5,7 +5,7 @@ attr_accessor :name, :breed
 attr_reader :idea
 
   def initialize(id = nil, name:, breed:)
-    @id = idea
+    @id = id
     @name = name
     @breed = breed
   end
