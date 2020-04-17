@@ -63,8 +63,8 @@ attr_reader :id
     sql = <<-SQL
       select * from dogs where name = ? and breed = ?
       SQL
-      DB[:conn].execute(sql, name, breed)
-      if !dog.empty?
+      doge = DB[:conn].execute(sql, name, breed)
+      if !doge.empty?
         result = dog[0]
         new_dog = Dog.new(id: result[0], name: result[1], breed: result[2])
       else
