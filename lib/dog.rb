@@ -49,13 +49,13 @@ attr_reader :id
     id = row[0]
     name = row[1]
     breed = row[2]
-    new_dog = self.new(id, name, breed)
+    new_dog = Dog.new(id, name, breed)
     new_dog
   end
 
   def self.find_by_id(id)
     id_find = DB[:conn].execute("select * from dogs where id = ?")[0]
-    new_dog = self.new(id_find[0], id_find[1], id_find[2])
+    new_dog = Dog.new(id_find[0], id_find[1], id_find[2])
     new_dog
   end
 
