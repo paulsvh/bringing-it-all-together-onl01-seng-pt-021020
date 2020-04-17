@@ -58,7 +58,7 @@ attr_reader :id
     new_dog = self.new(id_find[0], id_find[1], id_find[2])
     new_dog
   end
-    
+
 
 
 
