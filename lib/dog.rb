@@ -36,6 +36,7 @@ attr_reader :id
     DB[:conn].execute(sql, self.name, self.breed)
     @id = DB[:conn].execute("select last_insert_rowid() from students")[0][0]
     end
+    self
   end
 
 
