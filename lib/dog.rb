@@ -65,7 +65,7 @@ attr_reader :id
       SQL
       doge = DB[:conn].execute(sql, name, breed)
       if !doge.empty?
-        result = dog[0]
+        result = doge[0]
         new_dog = Dog.new(id: result[0], name: result[1], breed: result[2])
       else
         new_dog = Dog.create(name: name, breed: breed)
