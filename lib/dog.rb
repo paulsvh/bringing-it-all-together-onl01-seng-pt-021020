@@ -79,4 +79,9 @@ attr_reader :id
     new_dog
   end
 
+  def update
+    sql = "update dogs set name = ?, breed = ? where id = ?"
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
+  end
+
 end
