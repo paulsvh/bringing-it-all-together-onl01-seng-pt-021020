@@ -43,6 +43,7 @@ attr_reader :id
     new_dog = self.new(name, breed)
     new_dog.save
     new_dog
+  end
 
 
 
