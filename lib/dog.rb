@@ -70,7 +70,7 @@ attr_reader :id
       else
         new_dog = Dog.create(name: name, breed: breed)
       end
-      new_dog
+    new_dog
   end
 
 
