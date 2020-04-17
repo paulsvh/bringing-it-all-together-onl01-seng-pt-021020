@@ -40,7 +40,7 @@ attr_reader :id
   end
 
   def self.create(name:, breed:)
-    new_dog = self.new(name: name, breed: breed)
+    new_dog = Dog.new(name: name, breed: breed)
     new_dog.save
     new_dog
   end
