@@ -25,5 +25,24 @@ attr_reader :id
     DB[:conn].execute("drop table dogs")
   end
 
+  def save
+    if self.id
+      self.update
+    else
+    sql = <<-SQL
+      insert into dogs (name, breed)
+      values (?, ?)
+      SQL
+    DB[:conn].execute(sql, self.name, self.breed)
+    @id = DB[:conn].execute("select last_insert_rowid() from students")[0][0]
+    end
+  end
+
+
+
+
+
+
+
 
 end
