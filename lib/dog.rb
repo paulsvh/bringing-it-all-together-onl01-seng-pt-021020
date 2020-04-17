@@ -20,3 +20,8 @@ attr_reader :idea
       SQL
     DB[:conn].execute(sql)
   end
+
+
+
+
+end
